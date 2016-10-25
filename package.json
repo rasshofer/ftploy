@@ -1,0 +1,46 @@
+{
+  "name": "ftploy",
+  "version": "0.0.1",
+  "description": "A simple (CLI) tool to deploy stuff via FTP",
+  "author": {
+    "name": "Thomas Rasshofer",
+    "email": "hello@thomasrasshofer.com",
+    "url": "http://thomasrasshofer.com/"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rasshofer/ftploy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rasshofer/ftploy/issues"
+  },
+  "main": "ftploy.js",
+  "keywords": [
+    "ftploy",
+    "ftp",
+    "deployment",
+    "cli"
+  ],
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "glob": "^7.1.1",
+    "inquirer": "^1.2.2",
+    "jsftp": "^1.5.4",
+    "leprechaun": "0.0.2",
+    "lodash.isarray": "^4.0.0",
+    "lodash.merge": "^4.6.0",
+    "lodash.snakecase": "^4.1.1",
+    "nconf": "^0.8.4"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.4"
+  },
+  "scripts": {
+    "test": "jshint ftploy.js cli.js"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "ftploy": "cli.js"
+  }
+}
