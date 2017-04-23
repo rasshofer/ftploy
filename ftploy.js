@@ -40,7 +40,8 @@ module.exports = function (opts) {
       } else {
         glob(options.files, {
           cwd: options.localRoot,
-          ignore: options.exclude
+          ignore: options.exclude,
+          dot: true
         }, function (err, files) {
           if (err) {
             reject(err);

@@ -128,6 +128,8 @@ $ ftploy --exclude=*.jpg --exclude=*.png --exclude=node_modules/**/*
 
 ## Changelog
 
+* 0.0.3
+  * Include dot files during deployments
 * 0.0.2
   * Add shebang
   * Update dependencies
