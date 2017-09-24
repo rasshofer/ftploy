@@ -69,10 +69,10 @@ module.exports = function (opts) {
     return Promise.each([''].concat(directories), function (directory) {
       return new Promise(function (resolve, reject) {
         var remotePath = path.resolve(options.remoteRoot, directory);
-        ftp.raw.cwd(remotePath, function (err) {
+        ftp.raw('cwd', remotePath, function (err) {
           if (err) {
-            ftp.raw.mkd(remotePath, function (err) {
-              if(err) {
+            ftp.raw('mkd', remotePath, function (err) {
+              if (err) {
                 reject(err);
               } else {
                 resolve();
@@ -116,7 +116,7 @@ module.exports = function (opts) {
 
   function quitConnection () {
     return new Promise(function (resolve, reject) {
-      ftp.raw.quit(function (err) {
+      ftp.raw('quit', function (err) {
         if (err) {
           reject(err);
         } else {
