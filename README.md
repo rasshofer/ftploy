@@ -128,6 +128,9 @@ $ ftploy --exclude=*.jpg --exclude=*.png --exclude=node_modules/**/*
 
 ## Changelog
 
+* 0.0.4
+  * Create remote root directory as well in case it does not exist yet
+  * Update dependencies
 * 0.0.3
   * Include dot files during deployments
 * 0.0.2
