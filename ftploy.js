@@ -66,7 +66,7 @@ module.exports = function (opts) {
   }
 
   function createRemoteDirectories (directories) {
-    return Promise.each(directories, function (directory) {
+    return Promise.each([''].concat(directories), function (directory) {
       return new Promise(function (resolve, reject) {
         var remotePath = path.resolve(options.remoteRoot, directory);
         ftp.raw.cwd(remotePath, function (err) {
